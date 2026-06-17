@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { Send, MessageCircleCode, CheckCircle2, MessageCircle, AlertCircle, Instagram } from 'lucide-react';
+import { ProductCatalogItem } from '../types';
 
 interface ContactWhatsAppFormProps {
-  initialProductInterest?: string;
+  initialProductInterest?: ProductCatalogItem | null;
   onClearInterest?: () => void;
 }
 
-export default function ContactWhatsAppForm({ initialProductInterest = '', onClearInterest }: ContactWhatsAppFormProps) {
+export default function ContactWhatsAppForm({ initialProductInterest = null, onClearInterest }: ContactWhatsAppFormProps) {
   const [name, setName] = useState('');
   const [ageRange, setAgeRange] = useState('');
   const [interestScope, setInterestScope] = useState('general');
@@ -18,12 +19,28 @@ export default function ContactWhatsAppForm({ initialProductInterest = '', onCle
   // Default real WhatsApp number for Silvia: +54 9 341 604-4902
   const PHONE_NUMBER = '5493416044902'; 
 
+  useEffect(() => {
+    if (!initialProductInterest) return;
+
+    const categoryByProductType: Record<ProductCatalogItem['category'], string> = {
+      clothing: 'ropa',
+      footwear: 'calzado',
+      linen: 'blanquería',
+      bags: 'maternal',
+    };
+
+    setInterestScope(categoryByProductType[initialProductInterest.category]);
+    setSelectedBrand(initialProductInterest.brand || 'todas');
+    setAgeRange(initialProductInterest.sizes[0] || '');
+    setCustomMessage(`Me interesa consultar disponibilidad, colores y talles de ${initialProductInterest.name}. Talles publicados: ${initialProductInterest.sizes.join(', ')}.`);
+  }, [initialProductInterest]);
+
   const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
 
     let interestText = '';
     if (initialProductInterest) {
-      interestText = `el artículo específico "${initialProductInterest}"`;
+      interestText = `el artículo específico "${initialProductInterest.name}"`;
     } else {
       switch (interestScope) {
         case 'ropa': interestText = 'indumentaria de diseño'; break;
@@ -125,7 +142,7 @@ export default function ContactWhatsAppForm({ initialProductInterest = '', onCle
               <div className="bg-brand-mint text-brand-text border border-brand-mint/50 p-3 rounded-xl mb-6 flex items-center justify-between text-xs font-sans font-bold">
                 <div className="flex items-center gap-2">
                   <span className="font-extrabold text-brand-pink">Artículo:</span>
-                  <span className="italic">"{initialProductInterest}"</span>
+                  <span className="italic">"{initialProductInterest.name}"</span>
                 </div>
                 <button
                   onClick={onClearInterest}

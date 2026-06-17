@@ -11,14 +11,15 @@ import SizeCalculator from './components/SizeCalculator';
 import LocationHours from './components/LocationHours';
 import ContactWhatsAppForm from './components/ContactWhatsAppForm';
 import Footer from './components/Footer';
+import { ProductCatalogItem } from './types';
 import { Sparkles, Heart, Footprints, ShieldCheck, Gem, ChevronDown } from 'lucide-react';
 import HERO_BG_IMG from './assets/images/hero_boutique_1781707371626.jpg';
 
 export default function App() {
-  const [productInterest, setProductInterest] = useState<string>('');
+  const [productInterest, setProductInterest] = useState<ProductCatalogItem | null>(null);
 
-  const handleSelectProductForInquiry = (productName: string) => {
-    setProductInterest(productName);
+  const handleSelectProductForInquiry = (product: ProductCatalogItem) => {
+    setProductInterest(product);
     
     // Smooth scroll to the contact form so they can finalize and send the click
     const contactSection = document.getElementById('contacto');
@@ -28,7 +29,7 @@ export default function App() {
   };
 
   const handleClearInterest = () => {
-    setProductInterest('');
+    setProductInterest(null);
   };
 
   return (

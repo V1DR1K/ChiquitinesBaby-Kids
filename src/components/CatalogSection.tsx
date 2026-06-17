@@ -122,7 +122,7 @@ const CATALOG_ITEMS: ProductCatalogItem[] = [
   }
 ];
 
-export default function CatalogSection({ onSelectProduct }: { onSelectProduct: (productName: string) => void }) {
+export default function CatalogSection({ onSelectProduct }: { onSelectProduct: (product: ProductCatalogItem) => void }) {
   const [activeTab, setActiveTab] = useState<'all' | 'clothing' | 'footwear' | 'linen' | 'bags'>('all');
 
   const filteredItems = activeTab === 'all' 
@@ -287,7 +287,7 @@ export default function CatalogSection({ onSelectProduct }: { onSelectProduct: (
                   </ul>
 
                   <button
-                    onClick={() => onSelectProduct(item.name)}
+                    onClick={() => onSelectProduct(item)}
                     className="w-full text-center block text-xs font-extrabold py-3 bg-brand-peach-pink hover:bg-brand-pink text-white rounded-2xl cursor-pointer shadow-xs hover:shadow-md transition-all uppercase tracking-wider"
                   >
                     Consultar por WhatsApp
