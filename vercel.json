@@ -1,0 +1,5 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/chiquitines-baby-kids/browser",
+  "framework": "angular"
+}

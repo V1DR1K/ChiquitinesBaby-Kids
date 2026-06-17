@@ -1,0 +1,31 @@
+{
+  "name": "chiquitines-baby-kids",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node ./node_modules/@angular/cli/bin/ng.js serve --host 0.0.0.0 --port 4200",
+    "build": "node ./node_modules/@angular/cli/bin/ng.js build",
+    "preview": "node ./node_modules/@angular/cli/bin/ng.js serve --configuration production --host 0.0.0.0 --port 4200",
+    "clean": "node -e \"fs.rmSync('dist',{recursive:true,force:true})\"",
+    "lint": "node ./node_modules/typescript/bin/tsc --noEmit"
+  },
+  "dependencies": {
+    "@angular/animations": "^20.1.0",
+    "@angular/common": "^20.1.0",
+    "@angular/compiler": "^20.1.0",
+    "@angular/core": "^20.1.0",
+    "@angular/forms": "^20.1.0",
+    "@angular/platform-browser": "^20.1.0",
+    "@angular/router": "^20.1.0",
+    "rxjs": "~7.8.1",
+    "tslib": "^2.8.1",
+    "zone.js": "~0.15.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^20.1.0",
+    "@angular/cli": "^20.1.0",
+    "@angular/compiler-cli": "^20.1.0",
+    "typescript": "~5.8.2"
+  }
+}
