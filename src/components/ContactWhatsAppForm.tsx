@@ -37,8 +37,8 @@ export default function ContactWhatsAppForm({ initialProductInterest = '', onCle
     const brandText = selectedBrand !== 'todas' ? ` (interés en la marca ${selectedBrand})` : '';
 
     const text = `¡Hola Silvia! Mi nombre es *${name || 'un cliente'}*.\n\n` +
-      `Estuve visitando la landing page de la boutique y quería consultar por *${interestText}*${brandText}.\n` +
-      `Mi peque tiene aproximadamente *${ageRange || 'no especificado'}*.\n` +
+      `Estuve visitando la página y quería consultar por *${interestText}*${brandText}.\n` +
+      `Mi hijo tiene aproximadamente *${ageRange || 'no especificado'}*.\n` +
       (customMessage ? `\n*Consulta:* ${customMessage}\n` : '') +
       `\n¿Me podrías comentar si tenés stock o disponibilidad de talles? ¡Muchas gracias!`;
 
