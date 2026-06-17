@@ -1,0 +1,6 @@
+{
+  "name": "Boutique de Ropa Infantil",
+  "description": "Landing page para Chiquitines Baby & Kids, boutique de ropa de bebés y niños con catálogo interactivo, detalles de marcas exclusivas, calzado, blanquería, ubicación y horarios.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
