@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ShoppingBag, Sparkles, Check, ChevronRight, HelpCircle } from 'lucide-react';
 import { ProductCatalogItem } from '../types';
-
-// Let's import our custom-generated high fidelity image paths!
-const CLOTHES_IMG = '/src/assets/images/baby_garments_1781707386010.jpg';
-const FOOTWEAR_AND_BAG_IMG = '/src/assets/images/shoes_and_bag_1781707399010.jpg';
+import CLOTHES_IMG from '../assets/images/baby_garments_1781707386010.jpg';
+import FOOTWEAR_AND_BAG_IMG from '../assets/images/shoes_and_bag_1781707399010.jpg';
 
 const CATALOG_ITEMS: ProductCatalogItem[] = [
   // CLOTHING

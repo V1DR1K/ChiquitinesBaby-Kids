@@ -12,8 +12,7 @@ import LocationHours from './components/LocationHours';
 import ContactWhatsAppForm from './components/ContactWhatsAppForm';
 import Footer from './components/Footer';
 import { Sparkles, Heart, Footprints, ShieldCheck, Gem, ChevronDown } from 'lucide-react';
-
-const HERO_BG_IMG = '/src/assets/images/hero_boutique_1781707371626.jpg';
+import HERO_BG_IMG from './assets/images/hero_boutique_1781707371626.jpg';
 
 export default function App() {
   const [productInterest, setProductInterest] = useState<string>('');
