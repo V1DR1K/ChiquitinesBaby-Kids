@@ -35,6 +35,10 @@ export default function Footer() {
             <span className="font-medium">✓ Gepetto</span>
             <span className="font-medium">✓ Brotecitos</span>
             <span className="font-medium">✓ Cari</span>
+            <span className="font-medium">✓ Las Floritas</span>
+            <span className="font-medium">✓ Gorditoo</span>
+            <span className="font-medium">✓ Berni</span>
+            <span className="font-medium">✓ Pancita</span>
           </div>
         </div>
 

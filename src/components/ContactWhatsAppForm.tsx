@@ -44,7 +44,7 @@ export default function ContactWhatsAppForm({ initialProductInterest = null, onC
     } else {
       switch (interestScope) {
         case 'ropa': interestText = 'indumentaria de diseño'; break;
-        case 'calzado': interestText = 'calcados de mi bebé'; break;
+        case 'calzado': interestText = 'calzado para mi bebé'; break;
         case 'blanquería': interestText = 'artículos de blanquería de cuna'; break;
         case 'maternal': interestText = 'mochilas o bolsos maternales'; break;
         default: interestText = 'las colecciones exclusivas';
@@ -96,7 +96,7 @@ export default function ContactWhatsAppForm({ initialProductInterest = null, onC
                 ¿Buscás asesoramiento personalizado?
               </h3>
               <p className="text-white/80 text-sm leading-relaxed font-sans">
-                A diferencia de los grandes hipermercados, Silvia te asesora personalmente sobre las colecciones completas, combinaciones de colores y guías de talles según el peso real de tu bebé.
+                Silvia te asesora personalmente mostrándote distintas colecciones, combinaciones de colores y una guía de talles según el peso real de tu bebé.
               </p>
             </div>
 
@@ -186,11 +186,15 @@ export default function ContactWhatsAppForm({ initialProductInterest = null, onC
                      className="w-full px-4 py-2.5 rounded-xl border border-brand-peach-pink/30 bg-white text-sm text-brand-text focus:outline-hidden focus:ring-2 focus:ring-brand-pink transition-all"
                   >
                     <option value="todas">Ver todas</option>
-                    <option value="Reino Mora">Reino Mora (Romántica)</option>
-                    <option value="L'elefantino">L'elefantino (Nacimiento)</option>
-                    <option value="Gepetto">Gepetto (Paseos y Calzado)</option>
-                    <option value="Brotecitos">Brotecitos (Prendas Nobles)</option>
-                    <option value="Cari">Cari (Elegante Casual)</option>
+                    <option value="Reino Mora">Reino Mora</option>
+                    <option value="L'elefantino">L'elefantino</option>
+                    <option value="Gepetto">Gepetto</option>
+                    <option value="Brotecitos">Brotecitos</option>
+                    <option value="Cari">Cari</option>
+                    <option value="Gorditoo">Gorditoo</option>
+                    <option value="Las Floritas">Las Floritas</option>
+                    <option value="Berni">Berni</option>
+                    <option value="Pancita">Pancita</option>
                   </select>
                 </div>
               </div>

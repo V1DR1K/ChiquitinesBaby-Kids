@@ -9,26 +9,26 @@ interface StageData {
   minHeight: string;
   maxHeight: string;
   shoeSize: string;
-  shoeType: 'No Caminante (con Antideslizante)' | 'Caminante' | 'No aplica';
+  shoeType: 'No Caminante (con Antideslizante)' | 'Caminante' | 'No caminante / Caminante' | 'No aplica';
   notes: string;
 }
 
 const AGE_STAGES: StageData[] = [
   {
     label: 'Prematuro',
-    clothingSize: 'Talle 000 / Prematuro',
+    clothingSize: 'Talle 00 / Prematuro',
     minHeight: '40 cm',
     maxHeight: '48 cm',
-    shoeSize: 'Talle 14 - 15',
-    shoeType: 'No Caminante (con Antideslizante)',
+    shoeSize: 'No aplica',
+    shoeType: 'No aplica',
     notes: 'Prendas ultra suaves con costuras planas diseñadas especialmente para pieles extremadamente delicadas.',
   },
   {
     label: 'Recién Nacido (0-1 M)',
-    clothingSize: 'Talle 00 / RN',
+    clothingSize: 'Talle 0 / RN',
     minHeight: '48 cm',
     maxHeight: '54 cm',
-    shoeSize: 'Talle 14 - 15',
+    shoeSize: 'Talle 14',
     shoeType: 'No Caminante (con Antideslizante)',
     notes: 'Ropa fácil de mudar con broches hipoalergénicos. Medias y calzado talle 14 para mantener piecitos abrigados.',
   },
@@ -55,8 +55,8 @@ const AGE_STAGES: StageData[] = [
     clothingSize: 'Talle 9M - 12M',
     minHeight: '68 cm',
     maxHeight: '76 cm',
-    shoeSize: 'Talle 17 - 18',
-    shoeType: 'No Caminante (con Antideslizante)',
+    shoeSize: 'Talle 17 no caminante / Talle 18 caminante',
+    shoeType: 'No caminante / Caminante',
     notes: 'Etapa de gateo y primeros intentos de pararse. Cambiadores portátiles y toallones con capucha son indispensables ahora.',
   },
   {
@@ -84,14 +84,14 @@ const AGE_STAGES: StageData[] = [
     maxHeight: '98 cm',
     shoeSize: 'Talle 22 - 23',
     shoeType: 'Caminante',
-    notes: 'Mayor independencia al vestirse. Mochilitas infantiles son ideales para llevar al jardín o paseos.',
+    notes: 'Mayor independencia al vestirse. Camperitas con cierre delantero y pantalones con cintura elastizada son ideales para el jardín o los paseos.',
   },
   {
     label: '4 a 5 años',
     clothingSize: 'Talle 4 / 5',
     minHeight: '98 cm',
     maxHeight: '110 cm',
-    shoeSize: 'Talle 23 - 24',
+    shoeSize: 'Talle 24 - 25',
     shoeType: 'Caminante',
     notes: 'Prendas con estampas divertidas, costuras súper reforzadas para soportar todas sus aventuras de juego continuo.',
   },
@@ -100,7 +100,7 @@ const AGE_STAGES: StageData[] = [
     clothingSize: 'Talle 6',
     minHeight: '110 cm',
     maxHeight: '116 cm',
-    shoeSize: 'Talle 24 - 25',
+    shoeSize: 'Talle 26',
     shoeType: 'Caminante',
     notes: 'Espacio para correr y moverse. Calzado duradero y prendas transpirables de Reino Mora y Gepetto.',
   },
@@ -109,9 +109,9 @@ const AGE_STAGES: StageData[] = [
     clothingSize: 'Talle 8',
     minHeight: '116 cm',
     maxHeight: '128 cm',
-    shoeSize: 'Talle 25 - 26',
-    shoeType: 'Caminante',
-    notes: 'Nuestra medida límite. Vestimenta moderna que combina el juego con estilo infantil único y fresco.',
+    shoeSize: 'No aplica',
+    shoeType: 'No aplica',
+    notes: 'Nuestra medida límite. Vestimenta moderna que combina el juego con un estilo infantil único y fresco. Ropa de vestir ideal para eventos.',
   }
 ];
 

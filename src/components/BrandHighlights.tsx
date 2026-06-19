@@ -9,35 +9,35 @@ const BRANDS: Brand[] = [
     name: 'Reino Mora',
     badge: 'Diseño Exclusivo',
     style: 'Romántico & Artesanal',
-    description: 'Estilo de autor con detalles bordados únicos, géneros vaporosos, linos orgánicos y estampas súper dulces. Una propuesta prémium pensada para brillar en ocasiones especiales.',
+    description: 'Estilo de autor con detalles bordados únicos, géneros delicados y terminaciones soñadas. Una propuesta prémium pensada para brillar en ocasiones especiales.',
   },
   {
     id: 'lelefantino',
     name: "L'elefantino",
-    badge: 'Línea de Nacimiento',
-    style: 'Tejidos en Algodón Pima',
-    description: 'La delicadeza máxima hecha prenda. Sastrería de bebés, ajuares de bienvenida impecables y tejidos suaves de hilo que cuidan las primeras sonrisas de tu bebé.',
+    badge: 'Diseño Exclusivo',
+    style: 'Estilo & Tendencia',
+    description: 'La delicadeza máxima hecha para no pasar desapercibidos. Prendas que pueden combinarse entre sí y ofrecen diferentes outfits dentro de la misma línea.',
   },
   {
     id: 'gepetto',
     name: 'Gepetto',
     badge: 'Moda Activa',
     style: 'Colorido & Divertido',
-    description: 'Prendas súper cómodas y duraderas pensadas para niños exploradores del talle 2 al 8. Jeans flex, camperitas cancheras y remeras confeccionadas para jugar sin límites.',
+    description: 'Prendas súper cómodas y duraderas pensadas para niños exploradores de 12 meses a 8 años. Jeans flex, camperitas cancheras y remeras confeccionadas para jugar sin límites.',
   },
   {
     id: 'brotecitos',
     name: 'Brotecitos',
     badge: 'Básicos Esenciales',
     style: 'Algodón 100% Noble',
-    description: 'La mejor tela para vestir en el día a día. Ranitas, bodies, batitas y enteritos en algodón súper peinado que resiste cientos de lavados sin perder la suavidad original.',
+    description: 'El mejor algodón orgánico certificado para vestir en el día a día. Ranitas, bodies, batitas y enteritos en algodón súper peinado que resiste cientos de lavados sin perder su suavidad.',
   },
   {
     id: 'cari',
     name: 'Cari',
     badge: 'Casual Chic',
-    style: 'Estilo & Tendencia',
-    description: 'Conjuntos divinos que siguen las tendencias de los más grandes adaptados a la inocencia y practicidad infantil. Excelente equilibrio entre diseño vanguardista y confort.',
+    style: 'Práctico & Versátil',
+    description: 'Conjuntos que siguen las tendencias de los más grandes, adaptados a la inocencia y practicidad infantil. Excelente equilibrio entre diseño y confort.',
   }
 ];
 
@@ -70,7 +70,7 @@ export default function BrandHighlights() {
                 Reino Mora & L'elefantino
               </h3>
               <p className="text-[#6B5E53] font-sans leading-relaxed text-base mb-6">
-                Representamos con orgullo las firmas más selectas del sector de moda infantil. Estas marcas traen un concepto de diseño europeo y confección artesanal que transforman el vestuario de los recién nacidos y niños en piezas de colección.
+                Representamos con orgullo las firmas más selectas del sector de moda infantil. Estas marcas traen un concepto de diseño y confección que transforma el vestuario de los recién nacidos y niños en piezas de colección.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="bg-brand-mint/40 border border-brand-mint/20 px-4 py-2 rounded-full text-xs font-bold text-brand-text">
@@ -129,7 +129,9 @@ export default function BrandHighlights() {
                   <p className="text-[#6B5E53] text-sm leading-relaxed font-sans">{brand.description}</p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-brand-bg flex items-center justify-between">
-                  <span className="text-xs text-brand-pink font-extrabold">Talles desde Prematuro a 8 años</span>
+                  <span className="text-xs text-brand-pink font-extrabold">
+                    {brand.id === 'gepetto' ? 'Talles desde 12 meses a 8 años' : brand.id === 'brotecitos' ? 'Talles desde prematuro a 12 meses' : 'Talles desde recién nacido a 8 años'}
+                  </span>
                 </div>
               </motion.div>
             );

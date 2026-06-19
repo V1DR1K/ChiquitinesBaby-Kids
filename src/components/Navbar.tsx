@@ -16,7 +16,7 @@ export default function Navbar() {
       {/* Top Banner announcing 2007 experience & Rosario location */}
       <div className="bg-brand-peach-pink text-gray-800 py-2 px-4 text-center text-[10px] md:text-xs font-bold tracking-wider uppercase flex items-center justify-center gap-1.5 font-sans">
         <Sparkles className="w-3.5 h-3.5 text-brand-pink fill-current" />
-        <span>Desde 2007 vistiendo a los peques en Galería Libertad (Local 27, Rosario)</span>
+        <span>Desde 2007 vistiendo a los más pequeños en Galería Libertad (Sarmiento 854, Local 27, Rosario)</span>
         <span className="hidden sm:inline">• Ropa desde prematuro hasta 8 años</span>
       </div>
 

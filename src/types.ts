@@ -21,6 +21,6 @@ export interface ProductCatalogItem {
 export interface SizeRecommendation {
   clothingSize: string;
   shoeSize: string;
-  shoeType: 'No Caminante (con Antideslizante)' | 'Caminante' | 'No aplica';
+  shoeType: 'No Caminante (con Antideslizante)' | 'Caminante' | 'No caminante / Caminante' | 'No aplica';
   notes: string;
 }

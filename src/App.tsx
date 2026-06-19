@@ -108,7 +108,7 @@ export default function App() {
               </div>
               <h3 className="text-lg font-serif font-black text-[#5A5A5A] mb-1.5">Trayectoria de Amor</h3>
               <p className="text-[#6B6B6B] text-xs leading-relaxed font-sans">
-                Desde 2007 aconsejamos a familias rosarinas a vestir con ternura y confort a sus recién nacidos.
+                Desde 2007 te ayudamos a vestir con ternura y confort a los más pequeños de la familia.
               </p>
             </div>
 
@@ -117,9 +117,9 @@ export default function App() {
               <div className="w-14 h-14 rounded-2xl bg-white text-brand-pink flex items-center justify-center mb-4 shadow-xs">
                 <Gem className="w-7 h-7 text-emerald-700" />
               </div>
-              <h3 className="text-lg font-serif font-black text-[#5A5A5A] mb-1.5">Prematuros hasta 8 años</h3>
+              <h3 className="text-lg font-serif font-black text-[#5A5A5A] mb-1.5">Desde prematuros hasta 8 años</h3>
               <p className="text-[#6B6B6B] text-xs leading-relaxed font-sans">
-                Encontrá absolutamente todos los talles, mudas completas, batitas, ranitas y abrigos cancheros.
+                Encontrá todos los talles, mudas completas, ropa de vestir y vestimenta urbana.
               </p>
             </div>
 
@@ -128,7 +128,7 @@ export default function App() {
               <div className="w-14 h-14 rounded-2xl bg-white text-brand-pink flex items-center justify-center mb-4 shadow-xs">
                 <Footprints className="w-7 h-7 text-[#D56A15]" />
               </div>
-              <h3 className="text-lg font-serif font-black text-[#5A5A5A] mb-1.5">Calzado de Seguridad</h3>
+              <h3 className="text-lg font-serif font-black text-[#5A5A5A] mb-1.5">Calzado</h3>
               <p className="text-[#6B6B6B] text-xs leading-relaxed font-sans">
                 Zapatitos con grip antideslizante para no caminantes (14-17) y modelos anatómicos para caminantes (18-26).
               </p>
@@ -139,9 +139,9 @@ export default function App() {
               <div className="w-14 h-14 rounded-2xl bg-white text-brand-pink flex items-center justify-center mb-4 shadow-xs">
                 <ShieldCheck className="w-7 h-7 text-[#6C78B0]" />
               </div>
-              <h3 className="text-lg font-serif font-black text-[#5A5A5A] mb-1.5">Maternidad & Blanquería</h3>
+              <h3 className="text-lg font-serif font-black text-[#5A5A5A] mb-1.5">Blanquería</h3>
               <p className="text-[#6B6B6B] text-xs leading-relaxed font-sans">
-                Bolsos maternales prémium impermeables, cambiadores portátiles plegables y sábanas de batista peinada.
+                Bolsos y mochilas maternales impermeables, cambiadores, sábanas y demás accesorios.
               </p>
             </div>
 

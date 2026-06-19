@@ -115,7 +115,7 @@ export default function LocationHours() {
                   <div className="space-y-2 text-xs text-[#6B5E53] font-sans">
                     <p className="flex items-center gap-2">
                       <span className="w-6 h-6 font-bold rounded-full bg-white border border-brand-peach-pink/30 flex items-center justify-center text-brand-text">1</span>
-                      <span>Ingresá por peatonal San Martín o calle Sarmiento 854</span>
+                      <span>Ingresá por calle Sarmiento 854</span>
                     </p>
                     <p className="flex items-center gap-2">
                       <span className="w-6 h-6 font-bold rounded-full bg-white border border-brand-peach-pink/30 flex items-center justify-center text-brand-text">2</span>
@@ -123,7 +123,7 @@ export default function LocationHours() {
                     </p>
                     <p className="flex items-center gap-2">
                       <span className="w-6 h-6 font-bold rounded-full bg-white border border-brand-peach-pink/30 flex items-center justify-center text-brand-text">3</span>
-                      <span>¡Colecciones de recién nacidos exhibidas en vidriera!</span>
+                      <span>Identificá la vidriera con las colecciones de recién nacidos</span>
                     </p>
                   </div>
                 </div>
