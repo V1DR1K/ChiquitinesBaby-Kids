@@ -79,7 +79,7 @@ const AGE_STAGES: StageData[] = [
   },
   {
     label: '2 a 3 años',
-    clothingSize: 'Talle 3 / 4',
+    clothingSize: 'Talle 24 / 36 meses',
     minHeight: '88 cm',
     maxHeight: '98 cm',
     shoeSize: 'Talle 22 - 23',
@@ -88,7 +88,7 @@ const AGE_STAGES: StageData[] = [
   },
   {
     label: '4 a 5 años',
-    clothingSize: 'Talle 4 / 5',
+    clothingSize: 'Talle 48 meses / 6 años',
     minHeight: '98 cm',
     maxHeight: '110 cm',
     shoeSize: 'Talle 24 - 25',

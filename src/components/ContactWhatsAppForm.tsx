@@ -168,7 +168,7 @@ export default function ContactWhatsAppForm({ initialProductInterest = null, onC
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-[10px] font-black text-brand-pink uppercase tracking-widest mb-1.5">Edad o talle del peqe</label>
+                  <label className="block text-[10px] font-black text-brand-pink uppercase tracking-widest mb-1.5">Edad o talle del peque</label>
                   <input
                     type="text"
                     value={ageRange}
