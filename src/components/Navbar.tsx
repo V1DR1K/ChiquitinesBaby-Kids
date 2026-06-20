@@ -11,6 +11,14 @@ export default function Navbar() {
     { label: 'Ubicación & Horarios', href: '#ubicacion' },
   ];
 
+  const handleNavigation = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (!href.startsWith('#')) return;
+    event.preventDefault();
+    setMobileMenuOpen(false);
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.history.replaceState(null, '', href);
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-brand-bg shadow-sm">
       {/* Top Banner announcing 2007 experience & Rosario location */}
@@ -42,6 +50,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
+              onClick={(event) => handleNavigation(event, link.href)}
               className="text-xs font-extrabold text-[#7A6C61] hover:text-brand-pink uppercase tracking-wider transition-colors font-sans"
             >
               {link.label}
@@ -62,6 +71,7 @@ export default function Navbar() {
           </a>
           <a
             href="#contacto"
+            onClick={(event) => handleNavigation(event, '#contacto')}
             className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-brand-peach-pink text-white hover:bg-brand-pink text-xs font-extrabold uppercase tracking-wide shadow-xs transition-colors"
           >
             <MessageCircle className="w-4 h-4 fill-current text-white" />
@@ -87,7 +97,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(event) => handleNavigation(event, link.href)}
                 className="text-[#7A6C61] hover:text-brand-pink py-1 border-b border-[#FAF6F0] transition-colors block"
               >
                 {link.label}
@@ -106,7 +116,7 @@ export default function Navbar() {
             </div>
             <a
               href="#contacto"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={(event) => handleNavigation(event, '#contacto')}
               className="w-full text-center block py-2.5 rounded-xl bg-brand-peach-pink text-white font-extrabold uppercase tracking-wider shadow-sm"
             >
               Consultar Silvia en WhatsApp

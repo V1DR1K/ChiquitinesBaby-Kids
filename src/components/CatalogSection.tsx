@@ -4,6 +4,11 @@ import { ShoppingBag, Check, ChevronRight } from 'lucide-react';
 import { ProductCatalogItem } from '../types';
 import CLOTHES_IMG from '../assets/images/baby_garments_1781707386010.jpg';
 import FOOTWEAR_AND_BAG_IMG from '../assets/images/shoes_and_bag_1781707399010.jpg';
+import ProductGallery from './ProductGallery';
+
+const AJUAR_IMAGES = Object.values(import.meta.glob('../../FotosSilvia/Ajuar/*.{jpeg,jpg,png,webp}', { eager: true, query: '?url', import: 'default' })) as string[];
+const URBAN_IMAGES = Object.values(import.meta.glob('../../FotosSilvia/Ropa_Urbana/*.{jpeg,jpg,png,webp}', { eager: true, query: '?url', import: 'default' })) as string[];
+const SHOES_IMAGES = Object.values(import.meta.glob('../../FotosSilvia/Zapatos/*.{jpeg,jpg,png,webp}', { eager: true, query: '?url', import: 'default' })) as string[];
 
 const CATALOG_ITEMS: ProductCatalogItem[] = [
   {
@@ -114,6 +119,15 @@ export default function CatalogSection({ onSelectProduct }: { onSelectProduct: (
         <div className="flex flex-wrap justify-center gap-2 mb-12">
           {tabs.map((tab) => <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`px-5 py-2.5 rounded-full text-xs md:text-sm font-extrabold transition-all uppercase tracking-wide cursor-pointer ${activeTab === tab.id ? 'bg-brand-pink text-white shadow-md scale-102' : 'bg-white hover:bg-brand-peach-pink/20 text-[#6B5E53] border border-brand-peach-pink/30'}`}>{tab.label}</button>)}
         </div>
+        {(activeTab === 'all' || activeTab === 'clothing') && (
+          <>
+            <ProductGallery eyebrow="Primeros días" title="Ajuares para recibirlos con ternura" description="Conjuntos suaves y delicados para acompañar sus primeros días. Explorá colores, estampas y terminaciones reales disponibles en el local." images={AJUAR_IMAGES} accent="rose" />
+            <ProductGallery eyebrow="De 1 a 8 años" title="Ropa urbana para crecer jugando" description="Prendas cómodas, abrigadas y llenas de color para todos los días, seleccionadas para seguir el ritmo de los más chicos." images={URBAN_IMAGES} accent="mint" />
+          </>
+        )}
+        {(activeTab === 'all' || activeTab === 'footwear') && (
+          <ProductGallery eyebrow="Del talle 14 al 26" title="Calzado para cada pequeño paso" description="Modelos blandos para no caminantes y opciones anatómicas para quienes ya exploran el mundo sobre sus propios pies." images={SHOES_IMAGES} accent="lilac" />
+        )}
         <motion.div layout className={`grid grid-cols-1 gap-6 mb-12 ${filteredHighlights.length > 1 ? 'md:grid-cols-2' : ''}`} aria-live="polite">
           <AnimatePresence mode="popLayout">
           {filteredHighlights.map((highlight) => <motion.div layout initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.97 }} key={highlight.title} className="relative h-64 rounded-[32px] overflow-hidden shadow-sm border border-brand-peach-pink/30 group flex items-end">

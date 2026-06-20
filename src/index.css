@@ -15,3 +15,22 @@
   --color-brand-bg: #FFF9F5;
   --color-brand-text: #4A4A4A;
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+.gallery-scroll {
+  scrollbar-width: none;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery-scroll::-webkit-scrollbar {
+  display: none;
+}
