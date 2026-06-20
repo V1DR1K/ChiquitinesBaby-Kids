@@ -11,9 +11,13 @@ import SizeCalculator from './components/SizeCalculator';
 import LocationHours from './components/LocationHours';
 import ContactWhatsAppForm from './components/ContactWhatsAppForm';
 import Footer from './components/Footer';
+import EditorialHero from './components/EditorialHero';
 import { ProductCatalogItem } from './types';
 import { Sparkles, Heart, Footprints, ShieldCheck, Gem, ChevronDown } from 'lucide-react';
-import HERO_BG_IMG from './assets/images/hero_boutique_1781707371626.jpg';
+import HERO_MAIN_IMG from '../FotosSilvia/Inicio/WhatsApp Image 2026-06-19 at 15.35.10 (1).jpeg';
+import HERO_GALLERY_1 from '../FotosSilvia/Inicio/WhatsApp Image 2026-06-19 at 15.35.09 (1).jpeg';
+import HERO_GALLERY_2 from '../FotosSilvia/Inicio/WhatsApp Image 2026-06-19 at 15.35.09 (2).jpeg';
+import HERO_GALLERY_3 from '../FotosSilvia/Inicio/WhatsApp Image 2026-06-19 at 15.35.09.jpeg';
 
 export default function App() {
   const [productInterest, setProductInterest] = useState<ProductCatalogItem | null>(null);
@@ -37,12 +41,20 @@ export default function App() {
       {/* Dynamic Header & Ribbon */}
       <Navbar />
 
+      <EditorialHero
+        mainImage={HERO_MAIN_IMG}
+        galleryImages={[HERO_GALLERY_1, HERO_GALLERY_2, HERO_GALLERY_3]}
+        eyebrow="Moda infantil con alma • Desde 2007"
+        title="Vistiendo las primeras sonrisas de tu bebé"
+        description="Descubrí colecciones de diseño exclusivo desde prematuros hasta los 8 años. Te brindamos telas nobles de puro algodón, calzado anatómico y blanquería artesanal de la mejor calidad."
+      />
+
       {/* Elegant Hero Section with Premium Layering */}
-      <section className="relative min-h-[90vh] flex items-center justify-center px-4 overflow-hidden py-16">
+      <section className="hidden">
         {/* Absolute Background with soft gradient overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src={HERO_BG_IMG} 
+            src={HERO_MAIN_IMG} 
             alt="Interior del Local 27" 
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center scale-102" 
