@@ -7,6 +7,7 @@ import FOOTWEAR_AND_BAG_IMG from '../assets/images/shoes_and_bag_1781707399010.j
 import ProductGallery from './ProductGallery';
 
 const AJUAR_IMAGES = Object.values(import.meta.glob('../../FotosSilvia/Ajuar/*.{jpeg,jpg,png,webp}', { eager: true, query: '?url', import: 'default' })) as string[];
+const BABY_IMAGES = Object.values(import.meta.glob('../../FotosSilvia/Bebes/*.{jpeg,jpg,png,webp}', { eager: true, query: '?url', import: 'default' })) as string[];
 const URBAN_IMAGES = Object.values(import.meta.glob('../../FotosSilvia/Ropa_Urbana/*.{jpeg,jpg,png,webp}', { eager: true, query: '?url', import: 'default' })) as string[];
 const SHOES_IMAGES = Object.values(import.meta.glob('../../FotosSilvia/Zapatos/*.{jpeg,jpg,png,webp}', { eager: true, query: '?url', import: 'default' })) as string[];
 
@@ -121,6 +122,7 @@ export default function CatalogSection({ onSelectProduct }: { onSelectProduct: (
         </div>
         {(activeTab === 'all' || activeTab === 'clothing') && (
           <>
+            <ProductGallery eyebrow="Nuestros chiquitines" title="Ternura que inspira cada detalle" description="Bebés disfrutando la suavidad, el abrigo y la comodidad de prendas pensadas especialmente para acompañar sus primeros meses." images={BABY_IMAGES} accent="lilac" />
             <ProductGallery eyebrow="Primeros días" title="Ajuares para recibirlos con ternura" description="Conjuntos suaves y delicados para acompañar sus primeros días. Explorá colores, estampas y terminaciones reales disponibles en el local." images={AJUAR_IMAGES} accent="rose" />
             <ProductGallery eyebrow="De 1 a 8 años" title="Ropa urbana para crecer jugando" description="Prendas cómodas, abrigadas y llenas de color para todos los días, seleccionadas para seguir el ritmo de los más chicos." images={URBAN_IMAGES} accent="mint" />
           </>
