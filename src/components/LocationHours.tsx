@@ -199,14 +199,14 @@ export default function LocationHours() {
               
               {/* Mock map roads */}
               <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-[40%] left-0 right-0 h-8 bg-white border-y border-[#E0DCD3]"></div>
-                <div className="absolute left-[30%] top-0 bottom-0 w-8 bg-white border-x border-[#E0DCD3]"></div>
-                <span className="absolute left-[10px] top-[43%] text-[9px] uppercase font-bold tracking-widest text-[#B2AA9C]">Calle Mitre</span>
-                <span className="absolute left-[33%] top-[10px] text-[9px] uppercase font-bold tracking-widest text-[#B2AA9C] rotate-90 origin-top-left">Calle Rioja</span>
+                <div className="absolute top-[62%] left-0 right-0 h-8 bg-white border-y border-[#E0DCD3]"></div>
+                <div className="absolute left-[60%] top-0 bottom-0 w-8 bg-white border-x border-[#E0DCD3]"></div>
+                <span className="absolute left-[calc(60%+10px)] top-[10px] text-[9px] uppercase font-bold tracking-widest text-[#B2AA9C] rotate-90 origin-top-left">Calle Mitre</span>
+                <span className="absolute left-[10px] top-[calc(62%+9px)] text-[9px] uppercase font-bold tracking-widest text-[#B2AA9C]">Calle Rioja</span>
               </div>
 
               {/* Pin indicator */}
-              <div className="absolute top-[38%] left-[29.5%] -translate-x-[50%] -translate-y-[100%] flex flex-col items-center">
+              <div className="absolute top-[56%] left-[56%] -translate-x-[50%] -translate-y-[100%] flex flex-col items-center">
                 <div className="bg-white px-3 py-1.5 rounded-xl border border-brand-pink shadow-md text-[10px] font-black text-brand-text whitespace-nowrap z-10 flex items-center gap-1 animate-bounce">
                   <MapPin className="w-3.5 h-3.5 text-brand-pink fill-current" />
                   <span>Galería Paseo Peatonal - Local 10</span>

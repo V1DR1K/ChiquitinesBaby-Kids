@@ -49,7 +49,7 @@ export default function EditorialHero({ mainImage, galleryImages, eyebrow, title
 
         <aside className="grid h-full min-h-0 grid-cols-2 grid-rows-2 gap-1 overflow-hidden bg-white" aria-label="Interior de nuestro local">
           <figure className="group relative col-span-2 min-h-0 overflow-hidden bg-[#E8E2DC]">
-            <img src={galleryImages[0]} alt="Vista general del interior de Chiquitines" className="h-full w-full object-cover object-[center_62%] transition-transform duration-700 group-hover:scale-[1.02]" />
+            <img src={galleryImages[0]} alt="Vista general del interior de Chiquitines" className="h-full w-full object-cover object-[center_30%] transition-transform duration-700 group-hover:scale-[1.02]" />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/50 to-transparent px-5 pb-4 pt-12"><figcaption className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-white">Nuestro local</figcaption></div>
           </figure>
           <figure className="group relative min-h-0 overflow-hidden bg-[#E8E2DC]">

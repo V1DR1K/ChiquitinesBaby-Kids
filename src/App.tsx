@@ -14,10 +14,10 @@ import Footer from './components/Footer';
 import EditorialHero from './components/EditorialHero';
 import { ProductCatalogItem } from './types';
 import { Sparkles, Heart, Footprints, ShieldCheck, Gem, ChevronDown } from 'lucide-react';
-import HERO_MAIN_IMG from '../FotosSilvia/Inicio/WhatsApp Image 2026-06-19 at 15.35.10 (1).jpeg';
-import HERO_GALLERY_1 from '../FotosSilvia/Inicio/WhatsApp Image 2026-06-19 at 15.35.09 (1).jpeg';
-import HERO_GALLERY_2 from '../FotosSilvia/Inicio/WhatsApp Image 2026-06-19 at 15.35.09 (2).jpeg';
-import HERO_GALLERY_3 from '../FotosSilvia/Inicio/WhatsApp Image 2026-06-19 at 15.35.09.jpeg';
+import HERO_MAIN_IMG from '../FotosSilvia/LocalNuevo/local-fachada.jpg';
+import HERO_GALLERY_1 from '../FotosSilvia/LocalNuevo/local-interior.jpg';
+import HERO_GALLERY_2 from '../FotosSilvia/LocalNuevo/local-bebes.jpg';
+import HERO_GALLERY_3 from '../FotosSilvia/LocalNuevo/local-vidriera.jpg';
 
 export default function App() {
   const [productInterest, setProductInterest] = useState<ProductCatalogItem | null>(null);
@@ -55,7 +55,7 @@ export default function App() {
         <div className="absolute inset-0 z-0">
           <img 
             src={HERO_MAIN_IMG} 
-            alt="Interior del Local 10"
+            alt="Fachada de Chiquitines Baby & Kids en Galería Paseo Peatonal"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center scale-102" 
           />
