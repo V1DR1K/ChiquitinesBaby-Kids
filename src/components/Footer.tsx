@@ -53,8 +53,7 @@ export default function Footer() {
             <p className="flex items-start gap-2.5">
               <Clock className="w-4 h-4 text-brand-pink flex-shrink-0 mt-0.5" />
               <span>
-                Lunes a Viernes: 10:30 a 18:30 hs <br />
-                Sábados: 10:30 a 14:30 hs
+                Lunes a Sábados: 10 a 19 hs
               </span>
             </p>
             <p className="flex items-center gap-2.5">

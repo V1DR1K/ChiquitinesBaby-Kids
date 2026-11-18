@@ -7,8 +7,7 @@ export default function LocationHours() {
   const [statusText, setStatusText] = useState('Consultando estado comercial...');
 
   const STORE_HOURS = {
-    weekdays: { open: '10:30', close: '18:30', label: '10:30 a 18:30 hs' },
-    saturday: { open: '10:30', close: '14:30', label: '10:30 a 14:30 hs' },
+    weekdays: { open: '10:00', close: '19:00', label: '10 a 19 hs' },
     sunday: { label: 'Cerrado' }
   };
 
@@ -21,35 +20,25 @@ export default function LocationHours() {
       const minutes = now.getMinutes();
       const currentDecimalTime = hours + minutes / 60;
 
-      // 10:30 is 10.5, 14:30 is 14.5, 18:30 is 18.5
-      const openDec = 10.5;
-      const weekdaysCloseDec = 18.5;
-      const satCloseDec = 14.5;
+      // Store opens 10:00 to 19:00, Monday to Saturday. Sunday closed.
+      const openDec = 10;
+      const closeDec = 19;
 
-      if (day >= 1 && day <= 5) {
-        // Monday to Friday
-        if (currentDecimalTime >= openDec && currentDecimalTime < weekdaysCloseDec) {
+      if (day >= 1 && day <= 6) {
+        // Monday to Saturday
+        if (currentDecimalTime >= openDec && currentDecimalTime < closeDec) {
           setIsOpenNow(true);
-          setStatusText('¡Abierto ahora! Te esperamos hasta las 18:30 hs');
+          setStatusText('¡Abierto ahora! Te esperamos hasta las 19:00 hs');
         } else {
           setIsOpenNow(false);
-          const preamble = currentDecimalTime < openDec ? 'Abrimos hoy a las 10:30 hs' : 'Cerrado por hoy. Abrimos mañana 10:30 hs';
-          setStatusText(`Cerrado ahora • ${preamble}`);
-        }
-      } else if (day === 6) {
-        // Saturday
-        if (currentDecimalTime >= openDec && currentDecimalTime < satCloseDec) {
-          setIsOpenNow(true);
-          setStatusText('¡Abierto ahora! Te esperamos hasta las 14:30 hs');
-        } else {
-          setIsOpenNow(false);
-          const preamble = currentDecimalTime < openDec ? 'Abrimos hoy a las 10:30 hs' : 'Cerrado por hoy. Abrimos el lunes 10:30 hs';
+          const nextOpen = day === 6 ? 'Abrimos el lunes 10:00 hs' : 'Abrimos mañana 10:00 hs';
+          const preamble = currentDecimalTime < openDec ? 'Abrimos hoy a las 10:00 hs' : `Cerrado por hoy. ${nextOpen}`;
           setStatusText(`Cerrado ahora • ${preamble}`);
         }
       } else {
         // Sunday
         setIsOpenNow(false);
-        setStatusText('Cerrado • Te esperamos el lunes desde las 10:30 hs');
+        setStatusText('Cerrado • Te esperamos el lunes desde las 10:00 hs');
       }
     };
 
@@ -72,7 +61,7 @@ export default function LocationHours() {
             Dónde encontrarnos & Horarios
           </h2>
           <p className="text-[#6B5E53] text-base max-w-xl mx-auto font-sans leading-relaxed">
-            Estamos ubicados en el corazón de la ciudad de Rosario. Vení a conocer toda la indumentaria infantil y blanquería de forma personal.
+            Estamos ubicados en el corazón de la ciudad de Rosario. Identifica las vidrieras con las colecciones de recién nacidos y niños hasta 8 años.
           </p>
         </div>
 
@@ -168,15 +157,9 @@ export default function LocationHours() {
 
               <div className="divide-y divide-brand-peach-pink/20 font-sans">
                 <div className="py-3.5 flex justify-between items-center">
-                  <span className="font-bold text-sm text-[#4E4E4E]">Lunes a Viernes</span>
+                  <span className="font-bold text-sm text-[#4E4E4E]">Lunes a Sábados</span>
                   <span className="text-xs font-extrabold px-3.5 py-1.5 bg-white rounded-xl border border-brand-peach-pink/30 text-brand-text">
                     {STORE_HOURS.weekdays.label}
-                  </span>
-                </div>
-                <div className="py-3.5 flex justify-between items-center">
-                  <span className="font-bold text-sm text-[#4E4E4E]">Sábados</span>
-                  <span className="text-xs font-extrabold px-3.5 py-1.5 bg-white rounded-xl border border-brand-peach-pink/30 text-brand-text">
-                    {STORE_HOURS.saturday.label}
                   </span>
                 </div>
                 <div className="py-3.5 flex justify-between items-center text-neutral-400">
