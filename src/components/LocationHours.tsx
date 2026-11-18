@@ -59,7 +59,7 @@ export default function LocationHours() {
   }, []);
 
   const copyAddress = () => {
-    navigator.clipboard.writeText('Sarmiento 854, Galería Libertad, Local 27, Rosario, Santa Fe');
+    navigator.clipboard.writeText('Mitre 830, Galería Paseo Peatonal, Local 10, Rosario, Santa Fe');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -104,7 +104,7 @@ export default function LocationHours() {
                   <div>
                     <h4 className="font-serif font-black text-xl text-brand-text">Nuestra Dirección</h4>
                     <p className="text-sm text-[#6B5E53] mt-1 font-sans leading-relaxed">
-                      Sarmiento 854, Galería Libertad, Local 27.<br />
+                      Mitre 830, Galería Paseo Peatonal, Local 10.<br />
                       Rosario, Santa Fe, Argentina.
                     </p>
                   </div>
@@ -115,11 +115,11 @@ export default function LocationHours() {
                   <div className="space-y-2 text-xs text-[#6B5E53] font-sans">
                     <p className="flex items-center gap-2">
                       <span className="w-6 h-6 font-bold rounded-full bg-white border border-brand-peach-pink/30 flex items-center justify-center text-brand-text">1</span>
-                      <span>Ingresá por calle Sarmiento 854</span>
+                      <span>Ingresá por calle Mitre 830</span>
                     </p>
                     <p className="flex items-center gap-2">
                       <span className="w-6 h-6 font-bold rounded-full bg-white border border-brand-peach-pink/30 flex items-center justify-center text-brand-text">2</span>
-                      <span>Buscá el <strong>Local 27</strong> (Galería Libertad)</span>
+                      <span>Buscá el <strong>Local 10</strong> (Galería Paseo Peatonal)</span>
                     </p>
                     <p className="flex items-center gap-2">
                       <span className="w-6 h-6 font-bold rounded-full bg-white border border-brand-peach-pink/30 flex items-center justify-center text-brand-text">3</span>
@@ -147,7 +147,7 @@ export default function LocationHours() {
                   )}
                 </button>
                 <a
-                  href="https://maps.google.com/?q=Sarmiento+854,+Rosario,+Argentina"
+                  href="https://maps.google.com/?q=Mitre+830,+Rosario,+Argentina"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl bg-brand-pink text-xs font-extrabold text-white hover:bg-[#FF737D] transition-colors uppercase tracking-wider shadow-xs"
@@ -201,7 +201,7 @@ export default function LocationHours() {
               <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-[40%] left-0 right-0 h-8 bg-white border-y border-[#E0DCD3]"></div>
                 <div className="absolute left-[30%] top-0 bottom-0 w-8 bg-white border-x border-[#E0DCD3]"></div>
-                <span className="absolute left-[10px] top-[43%] text-[9px] uppercase font-bold tracking-widest text-[#B2AA9C]">Calle Sarmiento</span>
+                <span className="absolute left-[10px] top-[43%] text-[9px] uppercase font-bold tracking-widest text-[#B2AA9C]">Calle Mitre</span>
                 <span className="absolute left-[33%] top-[10px] text-[9px] uppercase font-bold tracking-widest text-[#B2AA9C] rotate-90 origin-top-left">Calle Rioja</span>
               </div>
 
@@ -209,7 +209,7 @@ export default function LocationHours() {
               <div className="absolute top-[38%] left-[29.5%] -translate-x-[50%] -translate-y-[100%] flex flex-col items-center">
                 <div className="bg-white px-3 py-1.5 rounded-xl border border-brand-pink shadow-md text-[10px] font-black text-brand-text whitespace-nowrap z-10 flex items-center gap-1 animate-bounce">
                   <MapPin className="w-3.5 h-3.5 text-brand-pink fill-current" />
-                  <span>Galería Libertad - Local 27</span>
+                  <span>Galería Paseo Peatonal - Local 10</span>
                 </div>
                 <div className="w-2.5 h-2.5 bg-brand-pink rounded-full border border-white ring-4 ring-brand-pink/20 mt-1"></div>
               </div>

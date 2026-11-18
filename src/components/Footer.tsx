@@ -48,7 +48,7 @@ export default function Footer() {
           <div className="space-y-2.5">
             <p className="flex items-start gap-2.5">
               <Navigation2 className="w-4 h-4 text-brand-pink flex-shrink-0 mt-0.5" />
-              <span>Sarmiento 854, Galería Libertad, Local 27, Rosario, Santa Fe.</span>
+              <span>Mitre 830, Galería Paseo Peatonal, Local 10, Rosario, Santa Fe.</span>
             </p>
             <p className="flex items-start gap-2.5">
               <Clock className="w-4 h-4 text-brand-pink flex-shrink-0 mt-0.5" />

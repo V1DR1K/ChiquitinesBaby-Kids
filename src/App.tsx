@@ -55,7 +55,7 @@ export default function App() {
         <div className="absolute inset-0 z-0">
           <img 
             src={HERO_MAIN_IMG} 
-            alt="Interior del Local 27" 
+            alt="Interior del Local 10"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center scale-102" 
           />

@@ -41,7 +41,7 @@ export default function EditorialHero({ mainImage, galleryImages, eyebrow, title
     <section aria-labelledby="hero-title" className="relative overflow-hidden bg-[#2F2925]">
       <div className="hidden h-[calc(100dvh-7rem)] min-h-0 grid-cols-[minmax(0,18fr)_minmax(330px,7fr)] overflow-hidden lg:grid">
         <div className="relative flex h-full min-h-0 items-center overflow-hidden px-[clamp(3rem,6vw,7.5rem)] py-[clamp(1.5rem,4vh,4rem)]">
-          <img src={mainImage} alt="Fachada de Chiquitines Baby & Kids en Galería Libertad" className="absolute inset-0 h-full w-full object-cover object-center" />
+          <img src={mainImage} alt="Fachada de Chiquitines Baby & Kids en Galería Paseo Peatonal" className="absolute inset-0 h-full w-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#241E1A]/82 via-[#2C241F]/48 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#211B17]/45 via-transparent to-black/18" />
           <HeroCopy eyebrow={eyebrow} title={title} description={description} />
@@ -63,7 +63,7 @@ export default function EditorialHero({ mainImage, galleryImages, eyebrow, title
 
       <div className="lg:hidden">
         <div className="relative flex min-h-[72svh] items-center justify-center overflow-hidden px-4 py-12 sm:min-h-[78svh]">
-          <img src={mainImage} alt="Fachada de Chiquitines Baby & Kids en Galería Libertad" className="absolute inset-0 h-full w-full object-cover object-[52%_center]" />
+          <img src={mainImage} alt="Fachada de Chiquitines Baby & Kids en Galería Paseo Peatonal" className="absolute inset-0 h-full w-full object-cover object-[52%_center]" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#332B26]/65 via-[#443830]/40 to-[#443830]/15" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#2E2722]/55 via-transparent to-black/25" />
           <HeroCopy eyebrow={eyebrow} title={title} description={description} mobile />

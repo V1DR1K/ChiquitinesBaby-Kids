@@ -80,7 +80,7 @@ export default function BrandHighlights() {
                   🌸 Ajuares y Sastrería de Cuna
                 </span>
                 <span className="bg-brand-orange/40 border border-brand-orange/20 px-4 py-2 rounded-full text-xs font-bold text-brand-text">
-                  👶 Diseños Únicos en Galeria Libertad
+                  👶 Diseños Únicos en Galería Paseo Peatonal
                 </span>
               </div>
             </div>
