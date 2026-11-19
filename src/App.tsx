@@ -14,7 +14,7 @@ import Footer from './components/Footer';
 import EditorialHero from './components/EditorialHero';
 import { ProductCatalogItem } from './types';
 import { Sparkles, Heart, Footprints, ShieldCheck, Gem, ChevronDown } from 'lucide-react';
-import HERO_MAIN_IMG from '../FotosSilvia/LocalNuevo/local-fachada.jpg';
+import HERO_MAIN_IMG from '../FotosSilvia/LocalNuevo/local-frente.jpg';
 import HERO_GALLERY_1 from '../FotosSilvia/LocalNuevo/local-interior.jpg';
 import HERO_GALLERY_2 from '../FotosSilvia/LocalNuevo/local-bebes.jpg';
 import HERO_GALLERY_3 from '../FotosSilvia/LocalNuevo/local-vidriera.jpg';
